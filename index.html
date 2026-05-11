@@ -6,9 +6,8 @@
 
 <title>Muhammad Adil Waria | AI Specialist & Islamic Scholar</title>
 
-<meta name="description" content="Official Portfolio of Muhammad Adil Waria. AI Specialist, Islamic Scholar, Web Developer and Digital Creator.">
-<meta name="keywords" content="Muhammad Adil Waria, AI Specialist, Islamic Scholar, Premium Apps, Courses, Books">
-<meta name="author" content="Muhammad Adil Waria">
+<meta name="description" content="Official Website of Muhammad Adil Waria">
+<meta name="keywords" content="Adil Waria, AI Specialist, Islamic Scholar, Premium Apps, Courses, Books">
 
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -23,14 +22,13 @@ body{
 background:#0b0f13;
 color:white;
 font-family:'Segoe UI',sans-serif;
+animation:fadePage 0.8s ease;
 overflow-x:hidden;
 }
 
-.glass{
-background:rgba(255,255,255,0.04);
-border:1px solid rgba(255,255,255,0.08);
-backdrop-filter:blur(12px);
-border-radius:24px;
+@keyframes fadePage{
+from{opacity:0;transform:scale(0.98);}
+to{opacity:1;transform:scale(1);}
 }
 
 .hero-glow{
@@ -39,18 +37,32 @@ width:300px;
 height:300px;
 background:#2563eb;
 filter:blur(140px);
-opacity:0.18;
+opacity:0.2;
 z-index:-1;
+}
+
+.glass{
+background:rgba(255,255,255,0.04);
+border:1px solid rgba(255,255,255,0.08);
+backdrop-filter:blur(12px);
+border-radius:24px;
+padding:20px;
 }
 
 .section-title{
 font-size:22px;
 font-weight:bold;
-margin:45px 0 20px;
+margin:50px 0 20px;
 display:flex;
 align-items:center;
 gap:10px;
 color:#60a5fa;
+animation:slideIn 0.8s ease;
+}
+
+@keyframes slideIn{
+from{opacity:0;transform:translateX(-20px);}
+to{opacity:1;transform:translateX(0);}
 }
 
 .skill{
@@ -59,12 +71,12 @@ font-size:12px;
 border-radius:999px;
 background:rgba(59,130,246,0.12);
 border:1px solid rgba(59,130,246,0.35);
-transition:.3s;
+transition:0.3s;
 }
 
 .skill:hover{
-transform:translateY(-2px);
-background:rgba(59,130,246,0.2);
+transform:scale(1.1);
+background:rgba(59,130,246,0.25);
 }
 
 .card{
@@ -72,27 +84,66 @@ background:#161b22;
 border:1px solid #2b3138;
 border-radius:18px;
 padding:14px;
-transition:.3s;
+text-align:center;
+transition:0.3s;
+opacity:0;
+transform:translateY(20px);
+animation:fadeUp 0.6s forwards;
+}
+
+.card:nth-child(1){animation-delay:0.1s;}
+.card:nth-child(2){animation-delay:0.2s;}
+.card:nth-child(3){animation-delay:0.3s;}
+.card:nth-child(4){animation-delay:0.4s;}
+
+@keyframes fadeUp{
+to{opacity:1;transform:translateY(0);}
 }
 
 .card:hover{
-transform:translateY(-5px);
+transform:translateY(-8px) scale(1.02);
+box-shadow:0 10px 30px rgba(59,130,246,0.25);
 border-color:#3b82f6;
-box-shadow:0 0 20px rgba(59,130,246,0.2);
 }
 
-.action-btn{
+.card img{
+width:70px;
+height:70px;
+border-radius:18px;
+margin:auto;
+}
+
+.btn{
 display:inline-block;
 padding:8px 16px;
 border-radius:10px;
 font-size:12px;
 font-weight:bold;
 background:linear-gradient(45deg,#2563eb,#7c3aed);
-transition:.3s;
+transition:0.3s;
+margin-top:10px;
+position:relative;
+overflow:hidden;
 }
 
-.action-btn:hover{
+.btn:hover{
 transform:scale(1.05);
+}
+
+.btn::before{
+content:"";
+position:absolute;
+top:0;
+left:-100%;
+width:100%;
+height:100%;
+background:rgba(255,255,255,0.2);
+transform:skewX(-20deg);
+transition:0.5s;
+}
+
+.btn:hover::before{
+left:120%;
 }
 
 .social-btn{
@@ -105,7 +156,7 @@ gap:8px;
 font-size:12px;
 font-weight:bold;
 border-radius:14px;
-transition:.3s;
+transition:0.3s;
 }
 
 .social-btn:hover{
@@ -125,92 +176,58 @@ align-items:center;
 justify-content:center;
 font-size:28px;
 color:white;
-box-shadow:0 0 20px rgba(0,0,0,0.4);
-z-index:999;
-transition:.3s;
+animation:pulse 2s infinite;
 }
 
-.float-whatsapp:hover{
-transform:scale(1.1);
-}
-
-.fade{
-animation:fadeIn 1s ease;
-}
-
-@keyframes fadeIn{
-from{
-opacity:0;
-transform:translateY(20px);
-}
-to{
-opacity:1;
-transform:translateY(0);
-}
+@keyframes pulse{
+0%{box-shadow:0 0 0 0 rgba(37,211,102,0.5);}
+70%{box-shadow:0 0 0 15px rgba(37,211,102,0);}
+100%{box-shadow:0 0 0 0 rgba(37,211,102,0);}
 }
 
 </style>
+
 </head>
 
 <body class="p-4 md:p-8">
 
 <div class="hero-glow top-0 left-0"></div>
 
-<header class="max-w-6xl mx-auto text-center mb-14 fade">
+<!-- HEADER -->
+
+<header class="text-center max-w-6xl mx-auto">
 
 <img src="adil.jpg"
-class="w-36 h-36 rounded-full border-4 border-blue-500 shadow-2xl mx-auto object-cover">
+class="w-36 h-36 rounded-full border-4 border-blue-500 mx-auto shadow-2xl">
 
-<h1 class="text-4xl md:text-5xl font-bold mt-6 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+<h1 class="text-4xl font-bold mt-6 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
 Muhammad Adil Waria
 </h1>
 
-<p class="text-gray-400 mt-3 text-sm">
-<i class="fas fa-location-dot text-red-500"></i>
+<p class="text-gray-400 mt-2">
 Bhakkar, Punjab, Pakistan 🇵🇰
 </p>
 
-<p class="text-gray-300 mt-5 max-w-2xl mx-auto text-sm leading-relaxed">
-AI Specialist, Islamic Scholar, Website Developer & Digital Creator focused on building useful digital experiences.
-</p>
+<!-- SOCIAL -->
 
 <div class="flex flex-wrap justify-center gap-3 mt-8">
 
-<a href="https://wa.me/923104399047"
-class="bg-[#25D366] social-btn">
-<i class="fab fa-whatsapp text-lg"></i>
-WhatsApp
-</a>
-
-<a href="mailto:adilwaria5001@gmail.com"
-class="bg-[#EA4335] social-btn">
-<i class="fas fa-envelope text-lg"></i>
-Email
-</a>
-
-<a href="https://youtube.com/@adilwaria_"
-class="bg-[#FF0000] social-btn">
-<i class="fab fa-youtube text-lg"></i>
-YouTube
-</a>
-
-<a href="https://instagram.com/muhammadadil5001"
-class="bg-gradient-to-r from-yellow-500 via-pink-500 to-purple-500 social-btn">
-<i class="fab fa-instagram text-lg"></i>
-Instagram
-</a>
+<a href="https://wa.me/923104399047" class="bg-[#25D366] social-btn"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+<a href="mailto:adilwaria5001@gmail.com" class="bg-red-500 social-btn"><i class="fas fa-envelope"></i> Email</a>
+<a href="https://youtube.com/@adilwaria_" class="bg-red-600 social-btn"><i class="fab fa-youtube"></i> YouTube</a>
+<a href="https://instagram.com/muhammadadil5001" class="bg-pink-500 social-btn"><i class="fab fa-instagram"></i> Instagram</a>
+<a href="https://facebook.com" class="bg-blue-600 social-btn"><i class="fab fa-facebook"></i> Facebook</a>
+<a href="https://tiktok.com" class="bg-black border border-gray-700 social-btn"><i class="fab fa-tiktok"></i> TikTok</a>
 
 </div>
 
 </header>
 
-<div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-6 fade">
+<!-- SKILLS -->
 
-<div class="glass p-6">
-<h2 class="text-xl font-bold mb-5 text-blue-400">
-<i class="fas fa-bolt text-yellow-400"></i>
-My Skills
-</h2>
+<div class="max-w-6xl mx-auto mt-12 glass">
+
+<h2 class="section-title"><i class="fas fa-bolt"></i> Skills</h2>
 
 <div class="flex flex-wrap gap-3">
 
@@ -222,117 +239,76 @@ My Skills
 <div class="skill">Content Creator</div>
 
 </div>
-</div>
-
-<div class="glass p-6">
-<h2 class="text-xl font-bold mb-5 text-blue-400">
-<i class="fas fa-user"></i>
-Profile Summary
-</h2>
-
-<p class="text-gray-300 text-sm leading-relaxed">
-Dedicated to combining Islamic knowledge with modern technology through digital content, premium resources, and creative online platforms.
-</p>
 
 </div>
 
-</div>
+<!-- APPS -->
 
-<div class="max-w-6xl mx-auto mt-14 fade">
+<div class="max-w-6xl mx-auto">
 
-<h2 class="section-title">
-<i class="fas fa-mobile-screen"></i>
-Premium Apps
-</h2>
+<h2 class="section-title"><i class="fas fa-mobile"></i> Premium Apps</h2>
 
-<div class="grid md:grid-cols-2 gap-4">
+<div id="apps" class="grid grid-cols-2 md:grid-cols-4 gap-4"></div>
 
-<div class="card">
-<h3 class="font-bold text-lg">Premium Apps Collection</h3>
-<p class="text-gray-400 text-sm mt-2">
-Premium apps will be uploaded soon.
-</p>
+<h2 class="section-title"><i class="fas fa-book"></i> Books</h2>
+<div id="books" class="grid grid-cols-2 md:grid-cols-4 gap-4"></div>
 
-<a href="#" class="action-btn mt-4 inline-block">
-Coming Soon
-</a>
-</div>
+<h2 class="section-title"><i class="fas fa-graduation-cap"></i> Courses</h2>
+<div id="courses" class="grid grid-cols-2 md:grid-cols-4 gap-4"></div>
 
 </div>
 
-<h2 class="section-title">
-<i class="fas fa-book-open"></i>
-Premium Islamic Books
-</h2>
+<!-- FOOTER -->
 
-<div class="grid md:grid-cols-2 gap-4">
-
-<div class="card">
-<h3 class="font-bold text-lg">Islamic Books Library</h3>
-<p class="text-gray-400 text-sm mt-2">
-PDF books collection will be available soon.
-</p>
-
-<a href="#" class="action-btn mt-4 inline-block">
-View Soon
-</a>
-</div>
-
-</div>
-
-<h2 class="section-title">
-<i class="fas fa-graduation-cap"></i>
-Premium Courses
-</h2>
-
-<div class="grid md:grid-cols-2 gap-4">
-
-<div class="card">
-<h3 class="font-bold text-lg">Premium Courses</h3>
-<p class="text-gray-400 text-sm mt-2">
-Professional courses will be uploaded soon.
-</p>
-
-<a href="#" class="action-btn mt-4 inline-block">
-Explore Soon
-</a>
-</div>
-
-</div>
-
-<h2 class="section-title">
-<i class="fas fa-headset"></i>
-Premium Contact
-</h2>
-
-<div class="grid md:grid-cols-2 gap-4">
-
-<div class="card">
-<h3 class="font-bold text-lg">Direct Contact</h3>
-<p class="text-gray-400 text-sm mt-2">
-For collaborations and premium services contact directly on WhatsApp.
-</p>
-
-<a href="https://wa.me/923104399047"
-class="action-btn mt-4 inline-block">
-Contact Now
-</a>
-</div>
-
-</div>
-
-</div>
-
-<footer class="text-center text-gray-600 mt-20 pb-10 text-xs border-t border-gray-800 pt-10">
-
-© 2026 Muhammad Adil Waria | All Rights Reserved
-
+<footer class="text-center text-gray-500 mt-20 text-xs">
+© 2026 Muhammad Adil Waria
 </footer>
 
-<a href="https://wa.me/923104399047"
-class="float-whatsapp">
+<!-- FLOAT BUTTON -->
+
+<a href="https://wa.me/923104399047" class="float-whatsapp">
 <i class="fab fa-whatsapp"></i>
 </a>
+
+<script>
+
+/* ===== EASY EDIT AREA ===== */
+
+const apps = [
+{title:"App 1",img:"https://via.placeholder.com/150",link:"#"},
+{title:"App 2",img:"https://via.placeholder.com/150",link:"#"},
+{title:"App 3",img:"https://via.placeholder.com/150",link:"#"},
+{title:"App 4",img:"https://via.placeholder.com/150",link:"#"}
+];
+
+const books = [
+{title:"Book 1",img:"https://via.placeholder.com/150",link:"#"},
+{title:"Book 2",img:"https://via.placeholder.com/150",link:"#"}
+];
+
+const courses = [
+{title:"Course 1",img:"https://via.placeholder.com/150",link:"#"},
+{title:"Course 2",img:"https://via.placeholder.com/150",link:"#"}
+];
+
+/* ===== RENDER FUNCTION ===== */
+
+function load(id,data){
+document.getElementById(id).innerHTML =
+data.map(i=>`
+<div class="card">
+<img src="${i.img}">
+<h3 class="mt-3 text-sm font-bold">${i.title}</h3>
+<a href="${i.link}" class="btn">Open</a>
+</div>
+`).join("");
+}
+
+load("apps",apps);
+load("books",books);
+load("courses",courses);
+
+</script>
 
 </body>
 </html>
