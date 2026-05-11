@@ -1,220 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ur">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adilwaria | Mohammad Adil Portfolio</title>
+    <title>Adil Waria | AI Specialist & Islamic Scholar</title>
+    <meta name="description" content="Official website of Mohammad Adil (Adil Waria) - AI Expert, Islamic Scholar and Content Creator.">
+    <meta name="keywords" content="Adil Waria, Mohammad Adil, AI Courses, Islamic Scholar, Digital Marketing">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
     <style>
-        :root {
-            --bg-color: #060b13;
-            --card-bg: rgba(255, 255, 255, 0.03);
-            --neon-blue: #00d2ff;
-            --neon-cyan: #3a7bd5;
-            --text-white: #ffffff;
-            --text-gray: #a0a0a0;
-        }
-
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-white);
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            padding: 20px;
-        }
-
-        .container {
-            max-width: 850px;
-            width: 100%;
-        }
-
-        /* Header Section */
-        .profile-header {
-            background: var(--card-bg);
-            backdrop-filter: blur(12px);
-            border-radius: 24px;
-            padding: 30px;
-            border: 1px solid rgba(0, 210, 255, 0.2);
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 25px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-        }
-
-        .profile-left { display: flex; align-items: center; }
-
-        .profile-pic {
-            width: 110px;
-            height: 110px;
-            border-radius: 50%;
-            border: 3px solid var(--neon-blue);
-            margin-right: 25px;
-            padding: 5px;
-            box-shadow: 0 0 20px rgba(0, 210, 255, 0.3);
-        }
-
-        .name-box h1 {
-            margin: 0;
-            font-size: 28px;
-            background: linear-gradient(to right, var(--neon-blue), #ffffff);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            letter-spacing: 1px;
-        }
-
-        .brand-name { color: var(--neon-blue); font-weight: bold; font-size: 14px; margin-bottom: 5px; display: block; }
-
-        .loc-tag {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 5px 12px;
-            border-radius: 20px;
-            font-size: 12px;
-            margin-top: 10px;
-            display: inline-block;
-        }
-
-        .exp-badge {
-            background: linear-gradient(45deg, var(--neon-blue), var(--neon-cyan));
-            padding: 8px 18px;
-            border-radius: 30px;
-            font-weight: bold;
-            font-size: 14px;
-            box-shadow: 0 0 15px rgba(0, 210, 255, 0.4);
-        }
-
-        /* Social Buttons */
-        .grid-buttons {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-            gap: 15px;
-            margin-bottom: 30px;
-        }
-
-        .btn {
-            padding: 14px;
-            border-radius: 15px;
-            text-align: center;
-            text-decoration: none;
-            color: white;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            font-size: 14px;
-            border: 1px solid rgba(255,255,255,0.1);
-        }
-
-        .btn-wa { background: #25D366; }
-        .btn-fb { background: #1877F2; }
-        .btn-insta { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
-        .btn-tk { background: #000000; }
-        .btn-mail { background: #333; }
-
-        .btn:hover { transform: translateY(-5px); box-shadow: 0 5px 20px rgba(255,255,255,0.15); }
-
-        /* Content Sections */
-        .info-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-        }
-
-        .info-card {
-            background: var(--card-bg);
-            border-radius: 20px;
-            padding: 25px;
-            border: 1px solid rgba(255,255,255,0.05);
-        }
-
-        .info-card h3 {
-            color: var(--neon-blue);
-            margin-bottom: 15px;
-            font-size: 20px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .info-card p {
-            font-size: 14px;
-            color: var(--text-gray);
-            line-height: 1.7;
-        }
-
-        .skill-container { display: flex; flex-wrap: wrap; gap: 8px; }
-
-        .skill-item {
-            background: rgba(0, 210, 255, 0.1);
-            color: var(--neon-blue);
-            padding: 6px 14px;
-            border-radius: 8px;
-            font-size: 12px;
-            border: 1px solid rgba(0, 210, 255, 0.2);
-        }
-
-        /* Mobile Responsive */
-        @media (max-width: 650px) {
-            .profile-header { flex-direction: column; text-align: center; }
-            .profile-left { flex-direction: column; margin-bottom: 20px; }
-            .profile-pic { margin-right: 0; margin-bottom: 15px; }
-            .grid-buttons { grid-template-columns: 1fr 1fr; }
-        }
+        body { background-color: #0d1117; color: white; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        .glass-card { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); border-radius: 15px; }
+        .btn-glow:hover { box-shadow: 0 0 15px rgba(0, 255, 255, 0.5); transform: translateY(-2px); transition: 0.3s; }
     </style>
 </head>
-<body>
+<body class="p-4 md:p-10">
 
-<div class="container">
-    <header class="profile-header">
-        <div class="profile-left">
-            <img src="adil.jpg" alt="Mohammad Adil" class="profile-pic">
-            <div class="name-box">
-                <span class="brand-name">ADILWARIA</span>
-                <h1>Mohammad Adil</h1>
-                <div class="loc-tag">📍 Bhakkar, Punjab, Pakistan 🇵🇰</div>
-            </div>
-        </div>
-        <div class="exp-badge">3+ Years Exp</div>
-    </header>
-
-    <div class="grid-buttons">
-        <a href="https://wa.me/923104399047" class="btn btn-wa">WhatsApp Chat</a>
-        <a href="mailto:adilwaria5001@gmail.com" class="btn btn-mail">Email Me</a>
-        <a href="https://www.facebook.com/share/1EisWYXi92/" class="btn btn-fb">Facebook</a>
-        <a href="https://tiktok.com/@muhammadadil5001" class="btn btn-tk">TikTok</a>
-        <a href="https://instagram.com/muhammadadil5001" class="btn btn-insta">Instagram</a>
-    </div>
-
-    <div class="info-grid">
-        <div class="info-card">
-            <h3>📖 Profile Summary</h3>
-            <p>
-                As a dedicated <b>Islamic Scholar</b> and <b>AI Specialist</b>, I bridge the gap between traditional wisdom and modern technology. 
-                With 3 years of expertise in digital content creation and web development, I specialize in crafting impactful Islamic theses and 
-                digital solutions that resonate with the modern age. My mission is to simplify complexity through creative design and innovative AI integration.
-            </p>
-        </div>
-
-        <div class="info-card">
-            <h3>⚡ My Expertise</h3>
-            <div class="skill-container">
-                <span class="skill-item">Islamic Thesis Writing</span>
-                <span class="skill-item">Web Development</span>
-                <span class="skill-item">AI Solutions</span>
-                <span class="skill-item">Content Creation</span>
-                <span class="skill-item">Digital Editing</span>
-                <span class="skill-item">Graphic Design</span>
-                <span class="skill-item">UI/UX Design</span>
-            </div>
-        </div>
-
-        <div class="info-card">
-            <h3>📞 Contact Info</h3>
-            <p><b>Phone:</b> +92 310 4399047</p>
-            <p><b>Email:</b> adilwaria5001@gmail.com</p>
-            <p style="margin-top: 10px;">Available for professional collaborations and digital consulting.</p>
+    <div class="max-w-4xl mx-auto text-center mb-10">
+        <img src="YOUR_IMAGE_URL_HERE" alt="Adil Waria" class="w-32 h-32 rounded-full border-4 border-blue-500 mx-auto mb-4 shadow-lg">
+        <h1 class="text-4xl font-bold text-blue-400">Mohammad Adil (Adil Waria)</h1>
+        <p class="text-gray-400 mt-2"><i class="fas fa-map-marker-alt text-red-500"></i> Bhakkar, Punjab, Pakistan</p>
+        
+        <div class="flex flex-wrap justify-center gap-3 mt-6">
+            <a href="https://wa.me/923104399047" class="bg-green-600 px-6 py-2 rounded-full btn-glow"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+            <a href="mailto:adilwaria5001@gmail.com" class="bg-gray-700 px-6 py-2 rounded-full btn-glow"><i class="fas fa-envelope"></i> Email</a>
+            <a href="#" class="bg-blue-600 px-6 py-2 rounded-full btn-glow"><i class="fab fa-facebook"></i> Facebook</a>
+            <a href="#" class="bg-pink-600 px-6 py-2 rounded-full btn-glow"><i class="fab fa-instagram"></i> Instagram</a>
         </div>
     </div>
-</div>
+
+    <div class="max-w-6xl mx-auto">
+        <h2 class="text-2xl font-bold border-b-2 border-blue-500 inline-block mb-8">My Categories</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            
+            <div class="glass-card overflow-hidden">
+                <img src="https://via.placeholder.com/400x200" alt="AI Course" class="w-full">
+                <div class="p-4 text-center">
+                    <h3 class="text-xl font-semibold">Free AI Course 2024</h3>
+                    <p class="text-gray-400 text-sm my-2">Learn AI from basics to advanced on YouTube.</p>
+                    <a href="YOUR_YOUTUBE_LINK" class="inline-block mt-2 bg-red-600 text-white px-4 py-2 rounded-md hover:bg-red-700">Watch on YouTube</a>
+                </div>
+            </div>
+
+            <div class="glass-card overflow-hidden">
+                <img src="https://via.placeholder.com/400x200" alt="Capcut" class="w-full">
+                <div class="p-4 text-center">
+                    <h3 class="text-xl font-semibold">CapCut Pro (PC)</h3>
+                    <p class="text-gray-400 text-sm my-2">Download the latest version for free.</p>
+                    <a href="YOUR_DOWNLOAD_LINK" class="inline-block mt-2 bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700">Download Now</a>
+                </div>
+            </div>
+
+            <div class="glass-card overflow-hidden">
+                <img src="https://via.placeholder.com/400 (1).jpg" alt="Reels" class="w-full">
+                <div class="p-4 text-center">
+                    <h3 class="text-xl font-semibold">1000+ Reels Bundle</h3>
+                    <p class="text-gray-400 text-sm my-2">Viral reels for Instagram & TikTok.</p>
+                    <a href="YOUR_LINK" class="inline-block mt-2 bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700">Get Link</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer class="text-center text-gray-500 mt-20 pb-10">
+        © 2024 Adil Waria | All Rights Reserved
+    </footer>
 
 </body>
 </html>
