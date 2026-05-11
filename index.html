@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Muhammad Adil Waria | Official Portfolio</title>
+<title>Adil Waria | Premium Digital Store</title>
 
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -12,19 +12,37 @@
 <style>
 
 body{
-background:#0b0f13;
-color:white;
+margin:0;
 font-family:Segoe UI;
+background: radial-gradient(circle at top,#0f1b2e,#0b0f13 70%);
+color:white;
 overflow-x:hidden;
 }
 
-html{
-scroll-behavior:smooth;
+/* background glow */
+.bg-glow{
+position:fixed;
+width:400px;
+height:400px;
+background:#3b82f6;
+filter:blur(150px);
+opacity:0.15;
+z-index:-1;
 }
 
-/* ===== HEADER ===== */
+/* HEADER */
 
-header img{
+header{
+text-align:center;
+padding:30px 10px;
+}
+
+.profile{
+width:140px;
+height:140px;
+border-radius:50%;
+border:4px solid #3b82f6;
+box-shadow:0 0 30px rgba(59,130,246,0.4);
 animation:float 4s ease-in-out infinite;
 }
 
@@ -33,42 +51,86 @@ animation:float 4s ease-in-out infinite;
 50%{transform:translateY(-10px);}
 }
 
-/* ===== GLASS ===== */
+/* TITLE */
 
-.glass{
-background:rgba(255,255,255,0.04);
-border:1px solid rgba(255,255,255,0.08);
-backdrop-filter:blur(12px);
-border-radius:22px;
-padding:20px;
-}
-
-/* ===== TITLE ===== */
-
-.title{
-font-size:22px;
+h2{
+margin:40px 0 15px;
+font-size:20px;
 font-weight:bold;
-margin:45px 0 15px;
-display:flex;
-gap:10px;
-align-items:center;
 color:#60a5fa;
+display:flex;
+align-items:center;
+gap:10px;
 }
 
-/* ===== CARD ===== */
+/* SEARCH */
+
+input{
+width:100%;
+padding:12px;
+border-radius:12px;
+border:1px solid #333;
+background:#0f172a;
+color:white;
+margin-top:20px;
+outline:none;
+}
+
+/* FILTER */
+
+.filters{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:8px;
+margin-top:15px;
+}
+
+.filters button{
+padding:6px 12px;
+border-radius:10px;
+background:#1f2937;
+color:white;
+border:none;
+cursor:pointer;
+transition:0.3s;
+font-size:12px;
+}
+
+.filters button:hover{
+background:#3b82f6;
+}
+
+/* GRID */
+
+.grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:12px;
+}
+
+@media(min-width:768px){
+.grid{grid-template-columns:repeat(4,1fr);}
+}
+
+/* CARD */
 
 .card{
-background:#161b22;
-border:1px solid #2b3138;
-border-radius:16px;
+background:rgba(255,255,255,0.05);
+border:1px solid rgba(255,255,255,0.08);
+backdrop-filter:blur(12px);
+border-radius:18px;
 padding:12px;
 text-align:center;
 transition:0.3s;
+position:relative;
+overflow:hidden;
 }
 
 .card:hover{
-transform:translateY(-6px) scale(1.02);
+transform:translateY(-8px) scale(1.03);
 border-color:#3b82f6;
+box-shadow:0 10px 35px rgba(59,130,246,0.25);
 }
 
 .card img{
@@ -77,6 +139,8 @@ height:65px;
 border-radius:14px;
 margin:auto;
 }
+
+/* BUTTON */
 
 .btn{
 display:inline-block;
@@ -87,52 +151,31 @@ font-size:11px;
 background:linear-gradient(45deg,#2563eb,#7c3aed);
 }
 
-/* ===== SOCIAL ===== */
+/* SOCIAL */
 
-.social{
-width:140px;
-height:45px;
+.socials{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:10px;
+margin-top:15px;
+}
+
+.socials a{
+width:130px;
+height:42px;
 display:flex;
 align-items:center;
 justify-content:center;
-gap:8px;
 border-radius:12px;
 font-size:12px;
 font-weight:bold;
 transition:0.3s;
 }
 
-.social:hover{
-transform:scale(1.05);
+.socials a:hover{
+transform:scale(1.06);
 }
-
-/* ===== SEARCH ===== */
-
-input{
-width:100%;
-padding:12px;
-border-radius:12px;
-border:1px solid #333;
-background:#111;
-color:white;
-margin-top:20px;
-}
-
-/* ===== FILTER ===== */
-
-.filter-btn{
-padding:6px 12px;
-border-radius:10px;
-font-size:12px;
-background:#1f2937;
-cursor:pointer;
-}
-
-.filter-btn:hover{
-background:#3b82f6;
-}
-
-/* ===== WHATSAPP ===== */
 
 .whatsapp{
 position:fixed;
@@ -140,8 +183,8 @@ bottom:20px;
 right:20px;
 width:60px;
 height:60px;
-background:#25D366;
 border-radius:50%;
+background:#25D366;
 display:flex;
 align-items:center;
 justify-content:center;
@@ -151,196 +194,141 @@ animation:pulse 2s infinite;
 
 @keyframes pulse{
 0%{box-shadow:0 0 0 0 rgba(37,211,102,0.5);}
-70%{box-shadow:0 0 0 15px transparent;}
+70%{box-shadow:0 0 0 18px transparent;}
 100%{box-shadow:0 0 0 0 transparent;}
+}
+
+section{
+max-width:1100px;
+margin:auto;
+padding:0 15px;
 }
 
 </style>
 
 </head>
 
-<body class="p-4 md:p-10">
+<body>
 
-<!-- HERO -->
+<div class="bg-glow"></div>
 
-<header class="text-center">
+<!-- HEADER -->
 
-<img src="adil.jpg"
-class="w-36 h-36 rounded-full border-4 border-blue-500 mx-auto">
+<header>
 
-<h1 class="text-4xl font-bold mt-5 text-blue-400">
+<img src="adil.jpg" class="profile">
+
+<h1 class="text-3xl font-bold mt-4 text-blue-400">
 Muhammad Adil Waria
 </h1>
 
-<p class="text-gray-400">Bhakkar, Punjab, Pakistan 🇵🇰</p>
+<p class="text-gray-300">Premium Digital Download Store</p>
 
 <!-- SOCIAL -->
 
-<div class="flex flex-wrap justify-center gap-3 mt-6">
+<div class="socials">
 
-<a class="social bg-green-500" href="https://wa.me/923104399047"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-<a class="social bg-red-600" href="#"><i class="fab fa-youtube"></i> YouTube</a>
-<a class="social bg-pink-500" href="#"><i class="fab fa-instagram"></i> Instagram</a>
-<a class="social bg-blue-600" href="#"><i class="fab fa-facebook"></i> Facebook</a>
-<a class="social bg-black border" href="#"><i class="fab fa-tiktok"></i> TikTok</a>
+<a class="bg-green-500" href="#">WhatsApp</a>
+<a class="bg-red-600" href="#">YouTube</a>
+<a class="bg-pink-500" href="#">Instagram</a>
+<a class="bg-blue-600" href="#">Facebook</a>
+<a class="bg-black border" href="#">TikTok</a>
 
 </div>
 
 <!-- SEARCH -->
 
-<input id="search" type="text" placeholder="Search apps, books, courses...">
+<section>
+<input id="search" placeholder="Search anything...">
 
 <!-- FILTER -->
 
-<div class="flex gap-2 flex-wrap mt-4 justify-center">
+<div class="filters">
 
-<div class="filter-btn" onclick="showAll()">All</div>
-<div class="filter-btn" onclick="filter('app')">Apps</div>
-<div class="filter-btn" onclick="filter('book')">Books</div>
-<div class="filter-btn" onclick="filter('course')">Courses</div>
+<button onclick="showAll()">All</button>
+<button onclick="filter('app')">Apps</button>
+<button onclick="filter('book')">Books</button>
+<button onclick="filter('course')">Courses</button>
 
 </div>
+
+</section>
 
 </header>
 
-<!-- SKILLS + PROFILE -->
+<!-- APPS -->
 
-<div class="grid md:grid-cols-2 gap-5 mt-10">
+<section>
 
-<div class="glass">
+<h2><i class="fas fa-mobile"></i> Apps</h2>
+<div id="apps" class="grid"></div>
 
-<h2 class="title"><i class="fas fa-bolt"></i> My Skills</h2>
+<h2><i class="fas fa-book"></i> Books</h2>
+<div id="books" class="grid"></div>
 
-<div class="flex flex-wrap gap-2 text-xs">
+<h2><i class="fas fa-graduation-cap"></i> Courses</h2>
+<div id="courses" class="grid"></div>
 
-<div class="px-3 py-1 bg-blue-900/30 rounded-full">AI Specialist</div>
-<div class="px-3 py-1 bg-blue-900/30 rounded-full">Web Developer</div>
-<div class="px-3 py-1 bg-blue-900/30 rounded-full">Islamic Scholar</div>
-<div class="px-3 py-1 bg-blue-900/30 rounded-full">Designer</div>
-
-</div>
-
-</div>
-
-<div class="glass">
-
-<h2 class="title"><i class="fas fa-user"></i> Profile Summary</h2>
-
-<p class="text-sm text-gray-300 leading-relaxed">
-Professional digital creator, Islamic scholar and AI specialist focused on web development and online educational content creation.
-</p>
-
-</div>
-
-</div>
-
-<!-- CONTENT -->
-
-<h2 class="title"><i class="fas fa-mobile"></i> Premium Apps</h2>
-<div id="apps" class="grid grid-cols-2 md:grid-cols-4 gap-3"></div>
-
-<h2 class="title"><i class="fas fa-book"></i> Premium Books</h2>
-<div id="books" class="grid grid-cols-2 md:grid-cols-4 gap-3"></div>
-
-<h2 class="title"><i class="fas fa-graduation-cap"></i> Premium Courses</h2>
-<div id="courses" class="grid grid-cols-2 md:grid-cols-4 gap-3"></div>
+</section>
 
 <!-- FOOTER -->
 
-<footer class="text-center text-gray-500 mt-20 text-xs">
-© 2026 Muhammad Adil Waria
+<footer class="text-center text-gray-500 mt-20 text-xs pb-10">
+© 2026 Adil Waria
 </footer>
 
 <!-- WHATSAPP -->
 
-<a href="https://wa.me/923104399047" class="whatsapp">
+<a class="whatsapp" href="#">
 <i class="fab fa-whatsapp"></i>
 </a>
 
 <script>
 
-/* ===== DATA (20 ITEMS SYSTEM) ===== */
+/* DATA */
 
 const data = {
-
-apps:Array.from({length:20},(_,i)=>({
-title:`App ${i+1}`,
-img:"https://via.placeholder.com/120",
-type:"app",
-link:"#"
-})),
-
-books:Array.from({length:20},(_,i)=>({
-title:`Book ${i+1}`,
-img:"https://via.placeholder.com/120",
-type:"book",
-link:"#"
-})),
-
-courses:Array.from({length:20},(_,i)=>({
-title:`Course ${i+1}`,
-img:"https://via.placeholder.com/120",
-type:"course",
-link:"#"
-}))
-
+apps:Array.from({length:20},(_,i)=>({title:"App "+(i+1),img:"https://via.placeholder.com/120",type:"app",link:"#"})),
+books:Array.from({length:20},(_,i)=>({title:"Book "+(i+1),img:"https://via.placeholder.com/120",type:"book",link:"#"})),
+courses:Array.from({length:20},(_,i)=>({title:"Course "+(i+1),img:"https://via.placeholder.com/120",type:"course",link:"#"}))
 };
 
-/* ===== RENDER ===== */
+/* RENDER */
 
 function render(id,items){
-
-document.getElementById(id).innerHTML =
-items.map((x,i)=>`
-
+document.getElementById(id).innerHTML=
+items.map(x=>`
 <div class="card item" data-type="${x.type}">
-
 <img src="${x.img}">
 <h3 class="text-sm font-bold mt-2">${x.title}</h3>
 <a href="${x.link}" class="btn">Download</a>
-
 </div>
-
 `).join("");
-
 }
 
 render("apps",data.apps);
 render("books",data.books);
 render("courses",data.courses);
 
-/* ===== SEARCH ===== */
+/* SEARCH */
 
-document.getElementById("search").addEventListener("input",function(){
-
-let value=this.value.toLowerCase();
-
-document.querySelectorAll(".item").forEach(el=>{
-
-el.style.display = el.innerText.toLowerCase().includes(value) ? "block":"none";
-
+document.getElementById("search").addEventListener("input",e=>{
+let v=e.target.value.toLowerCase();
+document.querySelectorAll(".item").forEach(c=>{
+c.style.display=c.innerText.toLowerCase().includes(v)?"block":"none";
+});
 });
 
-});
-
-/* ===== FILTER ===== */
+/* FILTER */
 
 function showAll(){
 document.querySelectorAll(".item").forEach(e=>e.style.display="block");
 }
 
-function filter(type){
-
+function filter(t){
 document.querySelectorAll(".item").forEach(e=>{
-
-if(e.dataset.type===type){
-e.style.display="block";
-}else{
-e.style.display="none";
-}
-
+e.style.display=e.dataset.type===t?"block":"none";
 });
-
 }
 
 </script>
